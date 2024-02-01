@@ -7,11 +7,17 @@ paper.addEventListener("click", playerSelection);
 var scissors = document.getElementById("scissors");
 scissors.addEventListener("click", playerSelection);
 
+var roundTotal = 1;
+var playerScore = 0;
+var computerScore = 0;
+
 function playerSelection(event) {
     //console.log(event.target);
-    var playerSelection = event.target;
+    var playerSelection = event.target;    
     playerSelection = playerSelection.innerHTML;
     console.log("Player Selection: " + playerSelection);
+    roundTotal += 1;
+
     getComputerChoice(playerSelection);
 }
 
@@ -40,33 +46,86 @@ function getComputerChoice(playerSelection) {
 
 function playRound(playerSelection, computerSelection) {
 
+    document.getElementById("roundtotal").innerHTML = roundTotal + "/5";
+    
     if (playerSelection == computerSelection) {
-        console.log("Draw!");            
+        document.getElementById("roundoutcome").innerHTML = "Draw!";          
     }
     switch (playerSelection) {
         case ("rock"):
             if (computerSelection == "paper") {
-                console.log("Paper covers rock! You Lose!");
+                document.getElementById("roundoutcome").innerHTML = "Paper covers rock! You Lose!";
+                computerScore += 1;
             }
             else if (computerSelection == "scissors") {
-                console.log("Rock crushes scissors! You win!");
+                document.getElementById("roundoutcome").innerHTML ="Rock crushes scissors! You win!";
+                playerScore += 1;
             }
             break;
         case ("paper"):
             if (computerSelection == "rock") {
-                console.log("Paper covers rock! You win!");
+                document.getElementById("roundoutcome").innerHTML ="Paper covers rock! You win!";
+                playerScore += 1;
             }
             else if (computerSelection == "scissors") {
-                console.log("Scissors cut paper! You lose!");
+                document.getElementById("roundoutcome").innerHTML = "Scissors cut paper! You lose!";
+                computerScore += 1;
             }                
             break;
         case ("scissors"):
             if (computerSelection == "paper") {
-                console.log("Scissors cut paper! You win!");
+                document.getElementById("roundoutcome").innerHTML = "Scissors cut paper! You win!";
+                playerScore += 1;
             }
             else if (computerSelection == "rock") {
-                console.log("Rock crushes scissors! You lose!");
+                document.getElementById("roundoutcome").innerHTML = "Rock crushes scissors! You lose!";
+                computerScore += 1;
             }
             break;            
     };
+
+    document.getElementById("playerscore").innerHTML = playerScore;
+    document.getElementById("computerscore").innerHTML = computerScore;
+    document.getElementById("selections").innerHTML =
+     "Player throws " + playerSelection + "<br> Computer throws " + computerSelection;
+
+     if (roundTotal > 5) {
+        document.getElementById("roundtotal").innerHTML = "Game Ended";
+        document.getElementById("roundtotal").innerHTML = "1/5"
+        restartGame();
+    }
+
+}
+
+function restartGame() {
+    var winner = "";
+    if (playerScore > computerScore) {
+        winner = "Player";
+    }
+    else if (computerScore > playerScore) {
+        winner = "Computer";
+    }
+    else {
+        winner = "No one";
+    }
+    document.getElementById("winner").innerHTML = "<b>Final Score</b> <br> Player Score: "
+     + playerScore + " Computer Score: " + computerScore +
+    ". " + winner + " wins.";
+    
+    roundTotal = 0;
+
+
+
+    if (roundTotal = 1) {
+        playerScore = 0;
+        computerScore = 0;
+    }
+    document.getElementById("playerscore").innerHTML = 0;
+    playerScore = 0;
+    document.getElementById("computerscore").innerHTML = 0;
+    computerScore = 0;
+    
+    document.getElementById("roundtotal").innerHTML = roundTotal + "/5";
+    document.getElementById("selections").innerHTML = "";
+    
 }
