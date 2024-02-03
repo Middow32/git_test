@@ -1,0 +1,46 @@
+#screen {
+    background-color: #1a99ed;
+    padding:18% 8%;
+    margin-bottom: 7%;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin: auto;
+    padding: 2.5%;
+    border: 2px solid black;
+    border-radius: 15px;    
+    background-color: rgba(80, 78, 78, 0.897);
+    width: 30%;
+    height: auto;    
+}
+
+.row {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.btnrow {
+    font-size: 2vw;
+    flex-basis: 80%;
+    padding: 2%;
+    margin: 2%;    
+    background-color: #1aa7ed;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: -8%;
+}
+
+html {    
+    background: repeating-radial-gradient(#f0eaea,#545454);
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
