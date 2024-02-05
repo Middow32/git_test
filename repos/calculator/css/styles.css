@@ -1,6 +1,8 @@
 #screen {
     background-color: #1a99ed;
+    display: flex;
     padding:18% 8%;
+    flex-basis: 100%;
     margin-bottom: 7%;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
@@ -43,4 +45,10 @@ html {
     background: repeating-radial-gradient(#f0eaea,#545454);
     background-repeat: no-repeat;
     min-height: 100%;
+}
+
+#total {
+    font-size: 2vw;
+    min-width: 0;
+    min-height: 0;
 }

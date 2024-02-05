@@ -12,34 +12,36 @@
 <body>
     
     <div id = "container">
-        <div id = "screen"></div>
-        <div class = "row">
-            <button class = "btnrow">7</button>
-            <button class = "btnrow">8</button>
-            <button class = "btnrow">9</button>
-            <button class = "btnrow">+</button>
+        <div id = "screen">&nbsp;
+            <div id = "total"><br></div>
         </div>
         <div class = "row">
-            <button class = "btnrow">4</button>
-            <button class = "btnrow">5</button>
-            <button class = "btnrow">6</button>
-            <button class = "btnrow">-</button>
+            <button class = "btnrow" onclick = input(7)>7</button>
+            <button class = "btnrow" onclick = input(8)>8</button>
+            <button class = "btnrow" onclick = input(9)>9</button>
+            <button class = "btnrow" onclick = "input('+');">+</button>
         </div>
         <div class = "row">
-            <button class = "btnrow">1</button>
-            <button class = "btnrow">2</button>
-            <button class = "btnrow">3</button>
-            <button class = "btnrow">*</button>
+            <button class = "btnrow" onclick = input(4)>4</button>
+            <button class = "btnrow" onclick = input(5)>5</button>
+            <button class = "btnrow" onclick = input(6)>6</button>
+            <button class = "btnrow" onclick = "input('-');">-</button>
         </div>
         <div class = "row">
-            <button class = "btnrow">00</button>
-            <button class = "btnrow">0</button>
-            <button class = "btnrow">.</button>
-            <button class = "btnrow">/</button>
+            <button class = "btnrow" onclick = input(1)>1</button>
+            <button class = "btnrow" onclick = input(2)>2</button>
+            <button class = "btnrow" onclick = input(3)>3</button>
+            <button class = "btnrow" onclick = "input('*');">x</button>
         </div>
         <div class = "row">
-            <button class = "btnrow">C</button>
-            <button class = "btnrow">=</button>
+            <button class = "btnrow" onclick = input(0o0)>.</button>
+            <button class = "btnrow" onclick = input(0)>0</button>
+            <button class = "btnrow" onclick = "input('**');">^</button>
+            <button class = "btnrow" onclick = "input('/');">/</button>
+        </div>
+        <div class = "row">
+            <button class = "btnrow" onclick = "input('C');">C</button>
+            <button class = "btnrow" onclick = "input('=');">=</button>
 
         </div>
 
