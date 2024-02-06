@@ -12,7 +12,6 @@ function input(num) {
     }
     else {
         total += num;
-        //total = total.join('');
         console.log(total);
         
     }    

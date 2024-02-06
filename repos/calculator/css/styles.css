@@ -48,7 +48,8 @@ html {
 }
 
 #total {
-    font-size: 2vw;
+    font-size: 3vw;
+    margin: auto;    
     min-width: 0;
     min-height: 0;
 }
