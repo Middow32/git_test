@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+html {
+    font-family: 'Skranji', system-ui;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    min-height: 100%;
+}
+
+.left {    
+    background-image: url("../images/waterfall.jpg");
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    height: max(100vh, 400px);
+    width: 37.5%;
+
+}
+
+.right {
+    font-size: 3vh;
+    color: rgba(255, 251, 251);
+    background: repeating-radial-gradient(#d2d2d3,#4270c6);
+    background-repeat: no-repeat;
+    height: max(100vh, 400px);
+    width: 62.5%;
+}
+#banner {
+    display: flex;
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    margin-top: 20.5%;
+    padding: 1%;
+}
+
+#bannerimg {
+    width: 20%;
+    height: 20%;
+}
+
+#bannertext {
+    color: white;
+    font-size: 6vw;
+}
+
+.top {
+    margin-left: 4%;
+    height: 32%;
+}
+.signup {
+    height: 31%;
+    background-color: #88a6cf;
+    border: 2px rgb(101,101,101);
+    border-radius: 5px;
+
+}
+
+#signupform {
+    display:flex;
+    justify-content: space-between;
+    font-size: 2vh;
+    margin: 4%;
+    width: 70%;
+}
+
+#signuphead {
+    padding-top: 1%;
+    margin-left: 4%;
+}
+.formcol {
+    margin-right: 2%;
+
+    align-self: center;
+}
+
+.bottom {
+    margin-left: 4%;
+    height: 31%;
+}
+
+input {
+    width: 15vw;
+    height: 2.5vh;
+    border-radius: 2px;
+    border: solid rgb(101, 101, 101);
+    font-family: 'Skranji', system-ui;
+}
+
+#btnaccount {
+    background-color: #88a6cf;
+    color: rgba(255, 251, 251);
+    font-family: 'Skranji', system-ui;
+    font-size: 2vh;
+    border-radius: 15px;
+    border: 2px solid rgb(101,101,101);
+    margin-top: 4%;
+    padding: 1% 4%;
+}
+
+#btnaccount:active {
+    border: black;
+}
+
+a {
+    text-decoration: none;
+    color: #4270c6;
+}
+
+.accountalready {
+    font-size: 2vh;
+}
