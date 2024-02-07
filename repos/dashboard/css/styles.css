@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100%;
+
+}
+
+.header {
+    background-color: rgb(59, 59, 100);
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+}
+.sidebar {
+    background-color: aquamarine;
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row-start: 1;
+    grid-row-end: 20;
+}
+
+.article {
+    display: grid;
+    grid-column: 2 / 4;
+    grid-row: 2 / 20;
+    
+}
+
+.projTitle {
+    background-color: blueviolet;
+    grid-column: 1 / 3;
+    grid-row-start: 1;
+}
+
+.projects {
+    display: grid;
+    background-color: aqua;
+    grid-column: 1 / 3;
+    grid-row: 2 / 20;
+}
+
+.announceTitle {
+    background-color: brown;    
+    grid-column: 3 / 4;
+    grid-row-start: 1;
+}
+
+.announcements {
+    background-color: lightcoral;
+    grid-column: 3 / 4;
+    grid-row: 2 / 10;
+}
+
+
+.trendingTitle {
+    background-color: cadetblue;
+    grid-column: 3 / 4;
+    grid-row-start: 10;
+}
+
+.trenders {
+    background-color: chocolate;
+    grid-column: 3/4;
+    grid-row: 11 / 20;
+}
+
+li {
+    list-style-type: none;
+}
