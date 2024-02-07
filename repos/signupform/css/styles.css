@@ -80,7 +80,7 @@ body {
 }
 
 .bottom {
-    margin-left: 4%;
+    margin-left: 4%;    
     height: 31%;
 }
 
@@ -99,7 +99,6 @@ input {
     font-size: 2vh;
     border-radius: 15px;
     border: 2px solid rgb(101,101,101);
-    margin-top: 4%;
     padding: 1% 4%;
 }
 
@@ -114,4 +113,8 @@ a {
 
 .accountalready {
     font-size: 2vh;
+}
+
+#btnaccount {
+    margin-top: 4%;
 }

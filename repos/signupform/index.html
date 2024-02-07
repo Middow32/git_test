@@ -31,24 +31,25 @@
                 <form id = "signupform">
                     <div class = "formcol">
                         <label for = "firstname">FIRST NAME</label><br>
-                        <input type = "text" placeholder = "John"> <br>
+                        <input id = "firstname" type = "text" placeholder = "John"> <br>
                         <label for = "email">EMAIL</label><br>
                         <input type = "text" placeholder = "odin@gmail.com"><br>
                         <label for = "password">PASSWORD</label><br>
-                        <input type = "password">
+                        <input id = "passwordInitial" type = "password">
                     </div>
                     <div class = "formcol">
                         <label for = "lastname">LAST NAME</label><br>
-                        <input type = "text" placeholder = "Doe"> <br>
+                        <input id = "lastname" type = "text" placeholder = "Doe"> <br>
                         <label for = "number">PHONE NUMBER</label><br>
                         <input type = "text" placeholder = "555-555-0123"><br>
                         <label for = "passwordconfirm">CONFIRM PASSWORD</label><br>
-                        <input type = "password">
-                    </div>
+                        <input id = "passwordConfirm" type = "password">                        
+                    </div>                    
                 </form>
+                
             </div>
             <div class = "bottom">
-                <button id = "btnaccount">Create Account</button>
+                <button id = "btnaccount" onclick = "validate();">Create Account</button>
                 <p class = "accountalready">Already have an account? <a href = "#">Log in here!</a></p>
             </div>
         </div>
