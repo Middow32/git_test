@@ -2,36 +2,64 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 2.5vh;
+    font-size: 2vh;
 }
-body {
-    
-}
+
+/* Encapsulates entire body */
 .container {
     display: grid;
-    grid-template-columns: 1.5fr repeat(3, 2fr);
+    grid-template-columns: 2fr repeat(4, 2fr) 3fr;
     grid-template-rows: 1fr 2fr;
     height: 100vh;
 }
 
+/* Side Bar Styles */
 .sidebar {
-    background-color: aquamarine;
+    background-color: rgb(21, 123, 226);
+    color: azure;
     grid-column: 1 / 2;
     grid-row: 1 / 5;
+    padding-left: 2vw;
+}
+.topSide {
+    display: flex;
+    align-items: center;
+    padding-top: 2vh;
 }
 
-.main {
-    display: grid;
-    grid-column: 2 / 5;
-    grid-template-columns: repeat(4, 1fr);
-    background-color: green;
-    height: 80vh;
+.midSide {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
 }
+.bottomSide {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+.sideGroup {
+    display: flex;
+    padding-bottom: 2vh;
+}
+.sideText {
+    font-size: 2vh;
+    padding-left: 1vw;
+}
+
+.dashText {
+    font-size: 3vh;
+    padding-left: 0.5vw;
+}
+
+/* Header Styling */
 .header {
     display: grid;
-    background-color: rgb(59, 59, 100);
-    grid-column: 2 / 5;
+    background-color: rgb(255, 255, 255);
+    grid-column: 2 / 7;
     height: 20vh;
+    padding-left: 2vw;
+    box-shadow: 0 0.6vh 0.6vh 0 rgb(193, 192, 192);
+    position: relative;
 }
 .headerTop {
     display: flex;
@@ -42,15 +70,32 @@ body {
 
 .hTopLeft {
     display: flex;
+    align-items: center;
 }
+
+.hTopRight {
+    display: flex;
+    align-items: center;
+    padding-right: 10vh;
+    gap: 2vh;
+}
+
+.profileName {
+    font-weight: 600;
+}
+.profileNameLeft {
+    font-weight: 600;
+    font-size: 2.5vh;
+}
+
 .searchbar {
     width: 30vw;
     height: 3vh;
-}
-.hTopRight {
-    display: flex;
-    padding-right: 10vh;
-    gap: 2vh;
+    border-radius: 15px;
+    margin-left: 2vw;
+    border: solid rgb(255, 255, 255);
+    background-color: rgb(217, 220, 222);
+
 }
 .btnGroup {
     display: flex;
@@ -59,6 +104,7 @@ body {
 
 .greetingGroup {
     display: flex;
+    align-items: center;
 }
 .leftGreet {
     padding-right: 2vh;
@@ -66,8 +112,27 @@ body {
 
 .navBtns {
     display: flex;
+    align-items: center;
     gap: 5vw;
     padding-right: 5vw;
+}
+
+button {
+    border-radius: 15px;
+    border: solid rgb(255, 255, 255);
+    padding: 0.6vh 2.5vw;
+    background-color: rgb(21, 123, 226);
+    color: rgb(255, 255, 255);
+
+}
+
+/* Main Content Styling */
+.main {
+    display: grid;
+    grid-column: 2 / 6;
+    background-color: rgb(217, 220, 222);
+    height: 80vh;
+    padding-left: 2vw;
 }
 
 .middle {
@@ -75,56 +140,136 @@ body {
     grid-column: 1 / 4;
 }
 
-.right {
-    display: grid;
-    grid-column: 4 / 5;
-
-}
-
 .projTitle {
+    font-weight: 600;
     padding: 2vh 0;
     grid-column: 1/4;
-    background-color: blueviolet;
     height: 5vh;
+    margin-left: 5vh;
+}
+
+.projSubTitle {
+    font-weight: 600;
+    padding-bottom: 1vh;
 }
 
 .projects {
     display: grid;
-    background-color: aqua;
     height: 75vh;
     grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 4vh;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    border-left: 0.6vh solid black;
+    border-radius: 15px;
+    border-left-color: rgb(202, 168, 44);
+    padding: 1vh 2vh;
+    margin: 2vh 4vh;
+    box-shadow: 0 0.6vh 0.6vh 0 rgb(137, 137, 137);
+
+}
+
+/* Right Side (Announcements and Trending) */
+.right {
+    display: grid;
+    grid-column: 6/7;
+    background-color: rgb(217, 220, 222);
+}
+.topRight {
+    display: grid;
+    height: 40vh;
+
+
+}
+.bottomRight {
+    height: 40vh;
 }
 
 .announceTitle {
-    padding: 2vh 0;
-    background-color: brown;
-    height: 5vh;
-
+    font-weight: 600;
+    padding: 2vh 0 0 0;
+    margin: 0 2vw;
+}
+.announceSubTitle {
+    font-weight: 600;
+}
+.announcements {    
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 1vh 2vw 0vh 2vw;
+    padding: 2vh;
+    box-shadow: 0 0.6vh 0.6vh 0 rgb(137, 137, 137);
+    position: relative;
 }
 
-.announcements {    
-    background-color: lightcoral;
+.announceCard {
+    padding: 1vh 1vh;
 }
 
 .trendingTitle {
-    padding: 2vh;
-    background-color: cadetblue;
-
+    font-weight: 600;
+    padding: 2vh 0;
+    margin: 0 2vw;
 }
 
 .trenders {
-    background-color: chocolate;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 0vh 2vw 2vh 2vw;
+    padding: 2vh 2vh 0 2vh;
+    box-shadow: 0 0.6vh 0.6vh 0 rgb(137, 137, 137);
 }
 
-
-.card {
-    background-color: azure;
-    border-radius: 15px;
-    padding: 10px;
-    margin: 2%;
-
+.trendCard {
+    display: flex;
 }
 
+.trendGroup {
+    padding-bottom: 4vh;
+    padding-left: 2vh;
+}
+
+/* Remove bullet styling from lists */
 li {
     list-style-type: none;
+}
+
+
+/* SVG Styling */
+svg {
+    width: 2vh;
+}
+
+svg.dashSVG {
+    width: 3vh;
+}
+
+.profilePicSVG {
+    width: 4vw;
+}
+
+.headerSVG {
+    fill: black;
+    width: 3vh;
+}
+
+.cardSVG {
+    fill: black;
+    padding: 0.4vh;
+    width: 3vh;
+}
+
+.sideSVG {
+    fill: white;
+}
+
+.cardSVGgroup {
+    margin-top: 2vh;
+    margin-left: 12vw;
+}
+
+.trendSVG {
+    width: 4vh;
 }
