@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5vh;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    background-color: rgb(164, 164, 217);
+}
+
+.header {
+    height: 30vh;
+    background-color: aqua;
+    position: relative;
+    box-shadow: 0 0.6vh 0.6vh 0 blue;
+}
+
+.headerGrp {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh;
+}
+
+#main {
+    height: 70vh;
+    background-color: brown;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#frmBook {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 15vw;
+    border: 0.11vw solid black;
+    border-radius: 1vw;
+    padding: 1vw;
+    background-color: rgb(211, 210, 213);
+}
+
+#btnBook {
+    margin-top: 8vh;
+    height: 8vh;
+    width: 8vw;
+}
+
+.bookRow {
+    display: flex;
+    height: 4vh;
+    align-items: center;
+}
+
+.headerLogo {
+    margin-top: 8vh;
+}
+
+.newBookSVG {
+    margin-left: 80%;
+    width: 40vw;
+    fill: brown;
+}
+
+.card {
+    padding: 1vh;
+    border: 0.3vh solid black;
+    border-radius: 1vh;
+    margin: auto;
+    align-items: center;
+}
