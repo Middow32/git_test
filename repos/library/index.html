@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- External Files -->
-    <script src = "js/scripts.js"></script>
+    <script src = "js/scripts.js" defer></script>
     <link rel = "stylesheet" href = "css/styles.css">
 
     <title>Document</title>
@@ -14,7 +14,10 @@
     <div class = "container">
         <div class = "header">
             <div class = "headerGrp">
-                <p class = "headerLogo">LOGO</p>
+                <!-- Top Left Logo SVG -->
+                <svg class = "topLeftLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 3V18H12V3H9M12 5L16 18L19 17L15 4L12 5M5 5V18H8V5H5M3 19V21H21V19H3Z" />
+                </svg>
                 <div class = "frmToggle" style = "display: none">
                     <form id = "frmBook">
                         <label for = "bookTitle">Title: </label>
@@ -25,8 +28,17 @@
                         <input id = "authorLast">
                         <label for = "pageNum">Pages</label>
                         <input id = "pageNum">
-                        <div class = "bookRow">
-                            <p>Read?</p>
+                        <div class = "bookRow"> 
+                            <div class = "didRead">
+                                <div>Read?</div>
+                                <svg class = "readSVG" style = "fill: gray" onclick = "readStatusChange();"
+                                xmlns="http://www.w3.org/2000/svg" 
+                                    viewBox="0 0 24 24">
+                                    <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,
+                                    4.88L21.71,7.71L9,20.42Z" />
+                                </svg>
+                            </div>
+                            <!-- Add Book SVG -->
                             <svg class = "newBookSVG" onclick = "addBookToLibrary();"
                             xmlns="http://www.w3.org/2000/svg" 
                             viewBox="0 0 24 24">
@@ -44,6 +56,5 @@
         <div id = "main">
         </div>
     </div>
-
 </body>
 </html>

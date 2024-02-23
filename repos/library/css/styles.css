@@ -12,9 +12,9 @@
 
 .header {
     height: 30vh;
-    background-color: aqua;
+    background-color: rgb(240, 239, 239);
     position: relative;
-    box-shadow: 0 0.6vh 0.6vh 0 blue;
+    box-shadow: 0 0.6vh 0.6vh 0 rgb(203, 203, 205);
 }
 
 .headerGrp {
@@ -25,32 +25,17 @@
 
 #main {
     height: 70vh;
-    background-color: brown;
+    background-color: rgb(240, 239, 239);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-#frmBook {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 15vw;
-    border: 0.11vw solid black;
-    border-radius: 1vw;
-    padding: 1vw;
-    background-color: rgb(211, 210, 213);
-}
-
-#btnBook {
-    margin-top: 8vh;
-    height: 8vh;
-    width: 8vw;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .bookRow {
     display: flex;
     height: 4vh;
     align-items: center;
+    justify-content: space-between;
+    padding-top: 2vh;
 }
 
 .headerLogo {
@@ -58,15 +43,68 @@
 }
 
 .newBookSVG {
-    margin-left: 80%;
-    width: 40vw;
+    height: 3vh;
     fill: brown;
+    margin-left: 2vh;
 }
 
 .card {
-    padding: 1vh;
-    border: 0.3vh solid black;
+    border: 0.3vh solid rgb(191, 187, 187);
     border-radius: 1vh;
+    border-left: 1.7vh solid rgb(171, 170, 170);
+    padding: 1vh;
     margin: auto;
+    width: 10vw;
+    height: 20vh;
     align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.6vh 0.6vh 0 rgb(145, 145, 149);
+    display: flex;
+}
+
+#frmBook {
+    border: 0.3vh solid rgb(191, 187, 187);
+    border-radius: 1vh;
+    border-left: 1.7vh solid rgb(171, 170, 170);
+    padding: 2vh;
+    margin: auto;
+    width: 10vw;
+    height: 20vh;
+    box-shadow: 0 0.6vh 0.6vh 0 rgb(145, 145, 149);
+    display: flex;    
+    flex-direction: column;
+}
+
+#btnBook {
+    border: 0.3vh solid rgb(191, 187, 187);
+    border-radius: 1vh;
+    box-shadow: 0 0.6vh 0.6vh 0 rgb(145, 145, 149);
+    margin-top: 8vh;
+    margin-right: 8vw;
+    height: 8vh;
+    width: 8vw;
+}
+
+.cardCol {
+    padding: 0.7vh;
+}
+
+
+.readSVG {
+    height: 3vh;
+    position: relative;
+}
+
+p {
+
+}
+
+.topLeftLogo {
+    margin-left: 8vw;
+    height: 20vh;
+    fill: rgb(171, 170, 170);
+}
+
+.checkbox {
+    margin-left: 1vw;
 }

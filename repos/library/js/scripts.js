@@ -1,15 +1,16 @@
 var frmBook = document.querySelector('#frmBook');
 const btnBook = document.querySelector('#btnBook');
-
+var isRead = "unchecked";
 var i = 0;
 const myLibrary = [];
 
 // Creates books
-function Book(title, firstName, lastName, pages) {
+function Book(title, firstName, lastName, pages, bookRead) {
     this.title = title;
     this.firstName = firstName;
     this.lastName = lastName;
-    this.pages = pages; 
+    this.pages = pages;
+    this.bookRead = bookRead;
 }
 
 // Adds books to the myLibrary array
@@ -19,9 +20,11 @@ function addBookToLibrary() {
     const authorFirst = document.querySelector('#authorFirst');
     const authorLast = document.querySelector('#authorLast');
     const pages = document.querySelector('#pageNum');
+    var bookRead = isRead;
 
-    const newBook = new Book(
-        title.value, authorFirst.value, authorLast.value, pages.value);
+    const newBook = new Book
+        (title.value, authorFirst.value, authorLast.value, pages.value, bookRead);
+
     myLibrary.push(newBook);
 
     main.innerHTML = "";
@@ -32,12 +35,18 @@ function showBooks() {
     myLibrary.forEach(book => {
         var main = document.querySelector('#main');
         var div = document.createElement("div");
+
         var card = 
-            `<div class = "card" data-index = ${i}>
-                <p>Title: ${book.title}</p>
-                <p>Author First: ${book.firstName}</p>
-            </div>`;
-        
+            `<div class = "card">
+                <div class = "cardCol">
+                    <p>Title: ${book.title}</p><br>
+                    <p>Author: ${book.firstName} ${book.lastName}</p><br>
+                    <p>Pages: ${book.pages}</p><br>
+                    <p>Read <input class = "checkbox" type = "checkbox" ${book.bookRead}></p>                
+                </div>
+            </div>`;   
+            
+
         main.innerHTML += card;       
 
     });
@@ -55,3 +64,21 @@ function frmDisplay() {
     }
 }
 
+function readStatusChange() {
+    const readStatus = document.querySelector('.readSVG');
+    if (readStatus.style.fill == "gray") {
+        readStatus.style.fill = "green";
+        isRead = "checked";
+    }
+    else {
+        readStatus.style.fill = "gray";
+        isRead = "unchecked";
+    }
+
+}
+
+function deleteBook() {
+    if(myLibrary([deleteBook])) {
+        delete myLibrary[deleteBook];
+    }
+}
