@@ -80,5 +80,6 @@ function readStatusChange() {
 function deleteBook() {
     if(myLibrary([deleteBook])) {
         delete myLibrary[deleteBook];
+        console.log("Reset Commit test");
     }
 }
